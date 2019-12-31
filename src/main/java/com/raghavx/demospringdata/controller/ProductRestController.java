@@ -12,7 +12,7 @@ import com.raghavx.demospringdata.model.Product;
 import com.raghavx.demospringdata.service.ProductService;
 
 @RestController
-public class ProductController {
+public class ProductRestController {
 
 	@Autowired
 	private ProductService productService;

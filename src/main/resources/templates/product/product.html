@@ -1,0 +1,39 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous"></link>
+</head>
+<body class="container">
+	<h1>Product Page</h1>
+	<div class="col-sm-6">
+		<form th:object="${product}" method="post" th:action="@{/web/product}">
+			<div class="form-group">
+				<label>Name</label> <input class="form-control" type="text"
+					th:field="*{name}"></input>
+			</div>
+
+			<div class="form-group">
+				<label>Description</label> <input class="form-control" type="text"
+					th:field="*{description}"></input>
+			</div>
+
+			<div class="form-group">
+				<label>Quantity</label> <input class="form-control" type="number"
+					th:field="*{quantity}"></input>
+			</div>
+
+			<div class="form-group">
+				<label>Price</label> <input class="form-control" type="number"
+					th:field="*{price}"></input>
+			</div>
+
+			<div class="pull-left">
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
